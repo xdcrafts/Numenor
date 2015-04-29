@@ -1,6 +1,6 @@
 module Main where
 
-import Numeric.Integration.Simpson()
+import Numeric.Integration.Simpson as S
 
 main::IO()
-main = putStrLn "Hello, World!"
+main = putStrLn . show $ S.integrateWithAccuracy 0.001 square 1 2
