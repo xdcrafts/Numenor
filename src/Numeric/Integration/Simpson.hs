@@ -13,7 +13,7 @@ splitOddsAndEvens (x:y:xs) = (x:xp, y:yp) where (xp, yp) = splitOddsAndEvens xs
 -- http://en.wikipedia.org/wiki/Simpson%27s_rule
 -- f - function
 -- a - begining of interval
--- b - end of inteval
+-- b - end of interval
 -- n - number of intervals of size h
 integrate :: Fractional f => Int -> (f -> f) -> f -> f -> f
 integrate n f a b =
@@ -30,7 +30,7 @@ integrate n f a b =
 -- e - accuracy
 -- f - function
 -- a - begining of interval
--- b - end of inteval
+-- b - end of interval
 -- n - number of intervals of size
 integrateFromN :: (Fractional f, Ord f) => f -> Int -> (f -> f) -> f -> f -> f
 integrateFromN e n f a b
