@@ -23,7 +23,7 @@ integrate n f a b =
         x i = a + h * i
         fx = f . x
         odds = fst oddsAndEvens
-        evens = snd  oddsAndEvens
+        evens = snd oddsAndEvens
         oddsAndEvens = splitOddsAndEvens (map fromIntegral [1..2 * n - 1])
  
 -- http://en.wikipedia.org/wiki/Simpson%27s_rule
