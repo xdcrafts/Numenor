@@ -4,13 +4,13 @@ module Numeric.Integration.Simpson (
     integrateWithAccuracy
 ) where
  
--- function that splits tuple by odd and even components
+-- |function that splits tuple by odd and even components
 splitOddsAndEvens :: [a] -> ([a], [a])
 splitOddsAndEvens [] = ([], [])
 splitOddsAndEvens [x] = ([x], [])
 splitOddsAndEvens (x:y:xs) = (x:xp, y:yp) where (xp, yp) = splitOddsAndEvens xs
  
--- http://en.wikipedia.org/wiki/Simpson%27s_rule
+-- |http://en.wikipedia.org/wiki/Simpson%27s_rule
 -- f - function
 -- a - begining of interval
 -- b - end of interval
@@ -26,7 +26,7 @@ integrate n f a b =
         evens = snd oddsAndEvens
         oddsAndEvens = splitOddsAndEvens (map fromIntegral [1..2 * n - 1])
  
--- http://en.wikipedia.org/wiki/Simpson%27s_rule
+-- |http://en.wikipedia.org/wiki/Simpson%27s_rule
 -- e - accuracy
 -- f - function
 -- a - begining of interval
@@ -41,10 +41,10 @@ integrateFromN e n f a b
         solution1 = integrate n f a b
         solution2 = integrate (2 * n) f a b
  
--- http://en.wikipedia.org/wiki/Simpson%27s_rule
--- e - accuracy
--- f - function
--- a - begining of interval
--- b - end of interval
+-- |http://en.wikipedia.org/wiki/Simpson%27s_rule
+-- |e - accuracy
+-- |f - function
+-- |a - begining of interval
+-- |b - end of interval
 integrateWithAccuracy :: (Fractional f, Ord f) => f -> (f -> f) -> f -> f -> f
 integrateWithAccuracy e = integrateFromN e 10
