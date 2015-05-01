@@ -18,3 +18,4 @@ cabal.sandbox.config
 .settings
 .project
 .idea
+*.iml
