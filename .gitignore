@@ -17,3 +17,4 @@ cabal.sandbox.config
 .dist-buildwrapper
 .settings
 .project
+.idea

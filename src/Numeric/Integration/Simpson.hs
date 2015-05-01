@@ -42,9 +42,9 @@ integrateFromN e n f a b
         solution2 = integrate (2 * n) f a b
  
 -- http://en.wikipedia.org/wiki/Simpson%27s_rule
--- e - acuracy
+-- e - accuracy
 -- f - function
 -- a - begining of interval
--- b - end of inteval
+-- b - end of interval
 integrateWithAccuracy :: (Fractional f, Ord f) => f -> (f -> f) -> f -> f -> f
 integrateWithAccuracy e = integrateFromN e 10
