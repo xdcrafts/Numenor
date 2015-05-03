@@ -4,13 +4,10 @@ import Numeric.Integration.Simpson as S
 import Numeric.Integration.Gauss as G
 
 f :: Double -> Double
-f x = x ** 5
-
-f4 :: Double -> Double
-f4 x = 120 * x
+f x = x ** 2
 
 integratedF :: Double -> Double
-integratedF x = x ** 6 / 6
+integratedF x = x ** 3 / 3
 
 a :: Double
 a = 1
