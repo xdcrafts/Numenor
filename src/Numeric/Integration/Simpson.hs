@@ -24,4 +24,4 @@ integrate n f a b =
         evens = snd oddsAndEvens
         oddsAndEvens = splitOddsAndEvens (map fromIntegral [1..2 * n - 1])
 
--- TODO: calculate error
+-- TODO: calculate error, calculate n for specified accuracy
