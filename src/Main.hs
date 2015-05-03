@@ -23,6 +23,6 @@ accuracy = 0.000001
 
 main::IO()
 main = do
-    putStrLn $ "integrated with simpson: " ++ show (S.integrate 600 f a b)
+    putStrLn $ "integrated with simpson: " ++ show (S.integrateE accuracy f a b)
     putStrLn $ "integrated with gauss: " ++ show (G.integrate accuracy 10 f a b)
     putStrLn $ "accurate value is: " ++ show (integratedF b - integratedF a)

@@ -4,6 +4,8 @@ module Numeric.Integration.Gauss (
 
 import Numeric.Polinomials.Legendre
 
+-- TODO: fix it
+
 -- | Gauss integration with Legendre polinomials of n'th order
 -- er - accuracy for polinomial roots
 -- n - order of Legendre polinomyal
