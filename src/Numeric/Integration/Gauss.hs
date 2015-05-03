@@ -4,8 +4,6 @@ module Numeric.Integration.Gauss (
 
 import Numeric.Polinomials.Legendre
 
--- TODO: fix it
-
 -- | Gauss integration with Legendre polinomials of n'th order
 -- er - accuracy for polinomial roots
 -- n - order of Legendre polinomyal
@@ -15,6 +13,6 @@ integrate :: Double -> Int -> (Double -> Double) -> Double -> Double -> Double
 integrate er n f a b = (b - a) / 2 * amount
     where amount = sum $ map step (polinomialRoots er n)
           step x = wi x * f (arg x)
-          wi x = 2 / ((1 - x * x) * polinomial' n x)
+          wi x = 2  / ((1 - x * x) * (polinomial' n x) ** 2)
           arg x = (b - a) / 2 * x + (b + a) / 2
 
